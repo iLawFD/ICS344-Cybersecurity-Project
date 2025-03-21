@@ -4,14 +4,14 @@ A cybersecurity project for ICS344 involving vulnerable service exploitation, SI
 # ICS344 Cybersecurity Project – Group X
 
 ## 🧑‍🤝‍🧑 Group Members
-- **Name 1** – ID: xxxxxxxx
-- **Name 2** – ID: xxxxxxxx
-- **Name 3** – ID: xxxxxxxx
+- **Fahad Almutairi** – ID: 202171210
+- **MOHAMMED AL SHEQAIH** – ID: 202168070
+- **MUATH ALWADEAI** – ID: 202045580
 
 ## 📌 Work Distribution
-- [Name 1] – Phase 1 setup & Metasploit attack
-- [Name 2] – Custom script & Phase 2 SIEM
-- [Name 3] – Defensive strategy & documentation
+- [Fahad Almutair] – Phase 1 setup & Metasploit attack
+- [MOHAMMED AL SHEQAIH] – Custom script & Phase 2 SIEM
+- [MUATH ALWADEAI] – Defensive strategy & documentation
 
 ---
 
