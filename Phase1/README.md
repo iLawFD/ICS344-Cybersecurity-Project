@@ -18,3 +18,9 @@ Before launching any attacks, we verified that the attacker machine (Kali Linux)
 
 
 ![Ping Test from Kali to Metasploitable](Screenshots/B-Connect.png)
+### 🔎 Step 3: Scanning for Open Ports and Services
+
+To discover vulnerable services running on the victim machine, we performed a full version scan using `nmap`:
+
+```bash
+nmap -sV 10.0.2.7
