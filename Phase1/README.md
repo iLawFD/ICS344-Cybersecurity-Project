@@ -8,3 +8,13 @@ We used the `ifconfig` command inside the Metasploitable3 VM to find its IP addr
 ![Metasploitable3 IP Address](Screenshots/A-FindIP-Metasplot.png)
 
 
+### 🔁 Step 2: Verifying Network Connectivity
+
+Before launching any attacks, we verified that the attacker machine (Kali Linux) can reach the victim machine (Metasploitable3) using the `ping` command.
+
+- **Target IP:** `10.0.2.7`
+- **Result:** Successful ping with 0% packet loss
+
+
+
+![Ping Test from Kali to Metasploitable](Screenshots/B-Connect.png)
