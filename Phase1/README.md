@@ -24,3 +24,4 @@ To discover vulnerable services running on the victim machine, we performed a fu
 
 ```bash
 nmap -sV 10.0.2.7
+![Metasploitable3 IP Address](Screenshots/C-FindPorts.png)
