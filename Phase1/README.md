@@ -6,3 +6,5 @@ We used the `ifconfig` command inside the Metasploitable3 VM to find its IP addr
 - **Discovered IP Address:** `10.0.2.7`
 
 ![Metasploitable3 IP Address](Screenshots/A-FindIP-Metasplot.png)
+
+
