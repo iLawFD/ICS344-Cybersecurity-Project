@@ -100,5 +100,12 @@ We ran the following command from the `/Downloads` directory:
 python3 Script.py
 ```
 ![Metasploitable3 IP Address](Screenshots/F-RunningScript.png)
+ What the Script Does
+The script automates the exploitation of the vulnerable ProFTPD 1.3.5 service using the mod_copy module. Here's what it performs:
 
+Generates a PHP reverse shell payload.
+
+Exploits the FTP server to copy this payload into the Apache web root directory (/var/www/html/).
+
+Provides a direct URL to the uploaded exploit:
 
