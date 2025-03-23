@@ -88,5 +88,17 @@ On Kali, we opened a Netcat listener on port `4444`:
 
 ```bash
 nc -lvnp 4444
+## 🔹 Task 1.2 – Running the Custom Exploit Script
+
+After manually exploiting the FTP service in Task 1.1 using Metasploit, we now move to automating the attack using a custom Python script.
+
+### ▶️ Step: Executing the Custom Exploit Script
+
+We ran the following command from the `/Downloads` directory:
+
+```bash
+python3 Script.py
+```
+![Metasploitable3 IP Address](Screenshots/F-RunningScript.png)
 
 
