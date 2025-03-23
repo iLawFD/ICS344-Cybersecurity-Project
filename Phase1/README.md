@@ -132,4 +132,43 @@ run
 ![Metasploitable3 IP Address](Screenshots/H-phpFilesUploaded.png)
 
 ---
+### 📜 What the Custom Script Does (Step-by-Step)
 
+---
+
+The custom Python script automates the exploitation of the **ProFTPD 1.3.5 mod_copy vulnerability** found on Metasploitable3.
+
+#### 🔧 Script Breakdown:
+
+1. **Generate PHP Payload:**
+   - The script creates a file named `exploit.php` that contains a **simple reverse shell** or **command execution payload**.
+   - This payload allows remote commands to be executed via a web browser using:
+     ```
+     http://<victim-ip>/exploit.php?cmd=<command>
+     ```
+
+2. **Upload Payload using ProFTPD mod_copy:**
+   - The script abuses the **`SITE CPFR`** and **`SITE CPTO`** commands of the vulnerable FTP server.
+   - It copies the payload from `/tmp/exploit.php` into `/var/www/html/` on the victim server.
+
+3. **Notify the User:**
+   - It tells the attacker:
+     - Where the payload was placed.
+     - How to trigger it (manually visit the URL).
+     - How to start a Netcat listener for a reverse shell (if using reverse shell payload).
+
+---
+
+### 📡 Why We Chose FTP (ProFTPD mod_copy)
+
+---
+
+The **FTP service (ProFTPD 1.3.5)** was selected for this project for several important reasons:
+
+
+
+#### 🔍 Known Exploit
+- The vulnerability is listed as [CVE-2015-3306], which is:
+  - Easy to exploit.
+  - Doesn't require credentials if anonymous access is allowed.
+  - Works reliably on Metasploitable3.
