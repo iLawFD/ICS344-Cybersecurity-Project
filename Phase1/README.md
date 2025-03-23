@@ -109,3 +109,17 @@ Exploits the FTP server to copy this payload into the Apache web root directory 
 
 Provides a direct URL to the uploaded exploit:
 
+
+### 📸 Custom Payload Execution via mod_copy (Script Proof )
+
+After uploading the `exploit.php` file using the custom script, we leveraged the `mod_copy` vulnerability to manually **execute a command on the victim machine** by setting the `CMD` option in Metasploit.
+
+We ran the following command to list the contents of the web root directory:
+
+```bash
+set CMD ls -l /var/www/html
+run
+```
+![Metasploitable3 IP Address](Screenshots/G-uploadingFile.png)
+
+
