@@ -122,4 +122,14 @@ run
 ```
 ![Metasploitable3 IP Address](Screenshots/G-uploadingFile.png)
 
+#### Conclusion
+
+-  **Reverse shell connection was successful.**
+-  **Custom script worked as intended.**
+-  **Payloads are visible in the victim’s `/var/www/html/` directory.**
+-  **Task 1.2 is completed with solid proof.**
+
+![Metasploitable3 IP Address](Screenshots/H-phpFilesUploaded.png)
+
+---
 
