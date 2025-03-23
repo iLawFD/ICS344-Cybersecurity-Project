@@ -73,8 +73,8 @@ exploit
 ## ✅ Step 5: Establishing a Reverse Shell to the Victim (End of Phase 1.1)
 
 
----
-![Metasploitable3 IP Address](Screenshots/E-VictimShell.png)
+![Metasploitable3 IP Address](Screenshots/A-FindIP-Metasplot.png)
+
 
 
 After successfully uploading the malicious PHP payload using the `mod_copy` exploit module in Metasploit, we triggered the payload by accessing it through the victim’s web server. This caused the victim (Metasploitable3) to connect back to our Kali machine, confirming a successful reverse shell.
