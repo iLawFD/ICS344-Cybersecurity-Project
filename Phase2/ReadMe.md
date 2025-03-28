@@ -19,7 +19,7 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 
 ---
 
-## 📊 Log Visualization & Analysis
+## 📊 Log Visualization
 
 Once both log files were uploaded, we used Splunk's **Search & Reporting** app to:
 
