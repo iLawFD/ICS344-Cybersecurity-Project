@@ -60,8 +60,7 @@ To detect potential malicious behavior, we ran pattern analysis on the `access_c
 
 > 🖼 *Screenshot: Request pattern analysis using Splunk’s pattern view*
 
-![Attack Pattern](Screenshots/attack pattern.png)
-
+![Screenshot H](./Screenshots/attack_pattern.png)
 **Findings:**
 - The requests to `exploit.php` and `read_log.php` were repeatedly triggered, suggesting automation tools or scripts were involved.
 - The pattern reveals constant interaction with chat logs (`/chat/read_log.php`), likely as part of a payload delivery or exfiltration mechanism.
