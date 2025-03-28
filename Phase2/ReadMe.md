@@ -92,3 +92,47 @@ From the two analyses above, we confirmed:
 
 Together, these visualizations serve as a forensic trace of the attack behavior in Phase 2, providing clear, time-aligned, and IP-based evidence of compromise.
 
+
+## 📈 HTTP Status Code Analysis
+
+Understanding HTTP response codes helps us determine how the web server responded to various requests—both normal and malicious.
+
+![Https](Screenshots/HTTP_status_codes.png)
+### 🔍 Search Query Used:
+```spl
+index="main" sourcetype="access_combined" | stats count by status
+```
+🧠 Analysis:
+This query gives us the number of responses grouped by status code:
+
+-200 (OK) – 158,666 responses
+The most common status code, indicating successful responses. This suggests the attacker’s requests were processed without issues.
+
+-302 (Found/Redirect) – 24 responses
+Redirection responses, possibly pointing to login or authentication-related pages. Could also be used to move the attacker to a different endpoint.
+
+-404 (Not Found) – 74 responses
+The attacker likely tried accessing endpoints that don’t exist. These 404s might indicate scanning behavior—looking for vulnerabilities or unlisted files.
+## 📈 Top Visited Endpoints
+
+By analyzing which URI paths were most frequently accessed, we can infer the attacker’s focus and behavior.
+
+"index="main" sourcetype="access_combined" | top limit=10 uri_path
+"
+![Https](Screenshots/top_visted_endpoints.png)
+
+🧠 Analysis:
+/chat/read_log.php – 155,756 hits
+This endpoint was the most accessed. It strongly suggests automated behavior (e.g., repeated log reading or extraction).
+
+/chat/post.php – 2,760 hits
+Likely tied to form or message submissions—possibly abused for input-based attacks.
+
+/chat/index.php – 68 hits
+Could be the attacker navigating the chat interface to explore functionality.
+
+/exploit.php – 34 hits
+The name itself hints at malicious intent. This might be the actual point of payload delivery or shell execution.
+
+Other endpoints like /, /favicon.ico, /sdk, /HNAPI, /about
+These received minimal hits and may indicate either app assets or low-interest scans during reconnaissance.
