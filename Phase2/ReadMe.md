@@ -9,7 +9,7 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 - **Attacker (Kali Linux)**: System journal logs (`system-journal.log`)
 
 > 📸 *Screenshot A: Uploading system-journal.log into Splunk (Attacker logs)*  
-![Screenshot A](/Screenshots/A.png)
+![Screenshot A](Phase2/Screenshots/A.png)
 
 ---
 
