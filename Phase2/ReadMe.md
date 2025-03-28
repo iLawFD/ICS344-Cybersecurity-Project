@@ -9,7 +9,7 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 - **Attacker (Kali Linux)**: System journal logs (`system-journal.log`)
 
 > 📸 *Screenshot A: Uploading system-journal.log into Splunk (Attacker logs)*  
-![Screenshot A](Phase2/Screenshots/A.png)
+![Screenshot A](Screenshots/A.png)
 
 ---
 
@@ -34,7 +34,7 @@ We compared logs from:
 This correlation allowed us to validate the success of the attack and its exact timeline.
 
 > 📸 *Screenshot C: Splunk search showing HTTP GET requests from attacker*  
-![Screenshot C](../screenshots/C.png)
+![Screenshot C](Screenshots/C.png)
 
 ---
 
