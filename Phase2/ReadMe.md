@@ -4,12 +4,14 @@
 
 In this phase, we integrated logs from both the **victim** and **attacker** environments into **Splunk**, our chosen SIEM tool. This step enables central analysis, threat detection, and deeper insight into attacker behavior.
 
+> 📸 *Screenshot A: Uploading system-journal.log into Splunk (Attacker logs)*  
+![Screenshot A](Screenshots/A.png)
+
+
 ### ✅ Logs Integrated:
 - **Victim (Metasploitable3)**: Apache access logs (`access.log`)
 - **Attacker (Kali Linux)**: System journal logs (`system-journal.log`)
 
-> 📸 *Screenshot A: Uploading system-journal.log into Splunk (Attacker logs)*  
-![Screenshot A](Screenshots/A.png)
 
 -
 > 📸 *Screenshot C: Uploading `system-journal.log` into Splunk (Attacker logs)*
