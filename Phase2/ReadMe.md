@@ -29,3 +29,14 @@ Once both log files were uploaded, we used Splunk's **Search & Reporting** app t
 
 > 📸 *Screenshot D: Querying `system-journal.log` inside Splunk*
 ![Screenshot D](./Screenshots/D.png)
+> 📸 *Screenshot E: Setting up local Python server on Metasploitable3 to share the log file*
+![Screenshot E](./Screenshots/E.png)
+
+> 📸 *Screenshot F: SCP command on Kali to download the log from the victim*
+![Screenshot F](./Screenshots/F.png)
+
+> 📸 *Screenshot G: Log file successfully transferred to Kali*
+![Screenshot G](./Screenshots/G.png)
+
+> 📸 *Screenshot H: Uploading Apache `access.log` into Splunk*
+![Screenshot H](./Screenshots/H.png)
