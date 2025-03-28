@@ -74,7 +74,7 @@ Next, we analyzed the **top client IPs** to determine who interacted with the se
 
 > 🖼 *Screenshot: Top IPs accessing the victim system*
   
-![Top IPs](Screenshots/Mostaccessed IPS.png)
+![Top IPs](Screenshots/Mostaccessed_IPS.png)
 
 **Findings:**
 - The IP `10.0.2.5` (our known **attacker machine**) had an extremely high volume of requests. This clearly links the attacker to the reverse shell activity and payload delivery.
