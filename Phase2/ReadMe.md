@@ -8,7 +8,7 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 ![Screenshot A](Screenshots/A.png)
 
 
-### ✅ Logs Integrated:
+### ✅ Logs Integrated: ("logs from both environments") 
 - **Victim (Metasploitable3)**: Apache access logs (`access.log`)
 - **Attacker (Kali Linux)**: System journal logs (`system-journal.log`)
 
@@ -19,7 +19,7 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 
 ---
 
-## 📊 Log Visualization
+### 📊 Log
 
 Once both log files were uploaded, we used Splunk's **Search & Reporting** app to:
 
@@ -31,7 +31,7 @@ Once both log files were uploaded, we used Splunk's **Search & Reporting** app t
 ![Screenshot D](./Screenshots/D.png)
 
 
-Now Lets transfer the "access.log" to kali and upload it to splunk 
+### Now Lets transfer the "access.log" to kali and upload it to splunk 
 > 📸 *Screenshot E: Setting up local Python server on Metasploitable3 to share the log file*
 ![Screenshot E](./Screenshots/E.png)
 
