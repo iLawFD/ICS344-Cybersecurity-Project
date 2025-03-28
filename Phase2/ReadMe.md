@@ -21,7 +21,7 @@ Once both log files were uploaded, we used Splunk's **Search & Reporting** app t
 - Analyze HTTP requests, user-agents, and payloads
 
 > 📸 *Screenshot B: Splunk main dashboard after successful data ingestion*  
-![Screenshot B](../Screenshots/B.png)
+![Screenshot B](Screenshots/B.png)
 
 ---
 
