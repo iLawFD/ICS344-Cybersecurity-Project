@@ -29,6 +29,9 @@ Once both log files were uploaded, we used Splunk's **Search & Reporting** app t
 
 > 📸 *Screenshot D: Querying `system-journal.log` inside Splunk*
 ![Screenshot D](./Screenshots/D.png)
+
+
+Now Lets transfer the "access.log" to kali and upload it to splunk 
 > 📸 *Screenshot E: Setting up local Python server on Metasploitable3 to share the log file*
 ![Screenshot E](./Screenshots/E.png)
 
