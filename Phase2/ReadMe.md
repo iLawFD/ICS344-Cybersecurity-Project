@@ -9,7 +9,7 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 - **Attacker (Kali Linux)**: System journal logs (`system-journal.log`)
 
 > 📸 *Screenshot A: Uploading system-journal.log into Splunk (Attacker logs)*  
-![Screenshot A](/screenshots/A.png)
+![Screenshot A](/Screenshots/A.png)
 
 ---
 
@@ -21,7 +21,7 @@ Once both log files were uploaded, we used Splunk's **Search & Reporting** app t
 - Analyze HTTP requests, user-agents, and payloads
 
 > 📸 *Screenshot B: Splunk main dashboard after successful data ingestion*  
-![Screenshot B](../screenshots/B.png)
+![Screenshot B](../Screenshots/B.png)
 
 ---
 
