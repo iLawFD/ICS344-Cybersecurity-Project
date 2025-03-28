@@ -11,35 +11,19 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 > 📸 *Screenshot A: Uploading system-journal.log into Splunk (Attacker logs)*  
 ![Screenshot A](Screenshots/A.png)
 
----
-
-## 📈 Log Visualization & Analysis
-
-Once both log files were uploaded, we used Splunk's **Search & Reporting** app to analyze patterns. This visualization helped us:
-- Confirm the execution of the reverse shell attack
-- Identify client IPs involved in the attack
-- Analyze HTTP requests, user-agents, and payloads
-
-> 📸 *Screenshot B: Splunk main dashboard after successful data ingestion*  
-![Screenshot B](Screenshots/B.png)
+-
+> 📸 *Screenshot C: Uploading `system-journal.log` into Splunk (Attacker logs)*
+![Screenshot C](./Screenshots/C.png)
 
 ---
 
-## 🔍 Attack Comparison
+## 📊 Log Visualization & Analysis
 
-We compared logs from:
-- The **attacker (10.0.2.5)** — initiating the reverse shell
-- The **victim (127.0.0.1)** — showing incoming HTTP requests and unusual activity
+Once both log files were uploaded, we used Splunk's **Search & Reporting** app to:
 
-This correlation allowed us to validate the success of the attack and its exact timeline.
 
-> 📸 *Screenshot C: Splunk search showing HTTP GET requests from attacker*  
-![Screenshot C](Screenshots/C.png)
+> 📸 *Screenshot B: Splunk main dashboard after logging in successfully*
+![Screenshot B](./Screenshots/B.png)
 
----
-
-## ✅ Deliverables Checklist
-
-- [x] **Screenshot of SIEM Integration** (victim + attacker logs)  
-- [x] **Screenshot of attack visualization** using Splunk dashboard  
-- [x] **Screenshot of log analysis** showing behavior and correlation  
+> 📸 *Screenshot D: Querying `system-journal.log` inside Splunk*
+![Screenshot D](./Screenshots/D.png)
