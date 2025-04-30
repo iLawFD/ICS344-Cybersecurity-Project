@@ -1,4 +1,5 @@
 # ✅ Phase 3: Defensive Strategy – Securing ProFTPD
+
 ## 🔐 Chosen Defense: Disable mod_copy Module in ProFTPD + Firewall Rule
 
 ### Step 1: Defense Mechanism – Disabling mod_copy
@@ -14,6 +15,7 @@ Restart the service:
 ```
 sudo service proftpd restart
 ```
+---
 
 ### Step 2: Add a Local Firewall Rule
 As an added layer of protection, block FTP from external access 
@@ -25,6 +27,14 @@ Verify:
 sudo ufw status
 ```
 
+---
 ### 🔁 Step 3: Re-run the Attack
 Now that we've set up our defense, let's re-run the attack.
+
+---
+## 🔐 Before-and-After Security Status
+| Scenario              | Attack Outcome        | Explanation                                |
+|-----------------------|-----------------------|--------------------------------------------|
+| **Before Defense**    | Reverse shell opened  | Exploit successful via mod_copy            |
+| **After Defense**     | Exploit failed        | mod_copy disabled, FTP blocked by firewall |
 
