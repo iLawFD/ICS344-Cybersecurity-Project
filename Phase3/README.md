@@ -15,12 +15,12 @@ This action mitigates the vulnerability CVE-2015-3306, which allows arbitrary fi
 For the sake of comparison, we will run the attack twice — once before setting the defense and once after.
 
 **Attack Before Defense:**
-![attack before 1](Phase3/screenshots/B.png)
+![attack before 1](screenshots/B.png)
 The whoami command returns www-data, confirming gained access as a web service user.
-![attack before 2](Phase3/screenshots/C.png)
+![attack before 2](screenshots/C.png)
 
 **Attack After Defense:**
-![attack after](Phase3/screenshots/D.png)
+![attack after](screenshots/D.png)
 As illustrated above, the attack failed due to a write failure during the proftpd_modcopy_exec attack
 ---
 
