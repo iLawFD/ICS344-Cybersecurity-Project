@@ -1,40 +1,33 @@
 # ✅ Phase 3: Defensive Strategy – Securing ProFTPD
 
-## 🔐 Chosen Defense: Disable mod_copy Module in ProFTPD + Firewall Rule
+## 🔐 Chosen Defense: Disable mod_copy Module in ProFTPD
 
 ### Step 1: Defense Mechanism – Disabling mod_copy
-Edit ProFTPD’s configuration file:
 ```
-sudo nano /etc/proftpd/proftpd.conf
+<IfModule mod_copy.c> CopyEngine off </IfModule>
 ```
-Comment out or remove the following line:
-```
-LoadModule mod_copy.c
-```
-Restart the service:
-```
-sudo service proftpd restart
-```
+![Disabling mod_copy](screenshots/A.PNG)
+This line explicitly disables the CopyEngine of the mod_copy module in ProFTPD.
+
+This action mitigates the vulnerability CVE-2015-3306, which allows arbitrary file copying via SITE CPFR and SITE CPTO.
+
+### 🔁 Step 2: Re-run the attack
+For the sake of comparison, we will run the attack twice — once before setting the defense and once after.
+
+**Attack Before Defense:**
+![attack before 1](screenshots/B.PNG)
+![attack before 2](screenshots/C.PNG)
+
+**Attack After Defense:**
+![attack after](screenshots/D.PNG)
+As illustrated above, the attack failed due to a write failure during the proftpd_modcopy_exec attack
 ---
 
-### Step 2: Add a Local Firewall Rule
-As an added layer of protection, block FTP from external access 
-```
-sudo ufw deny from 10.0.2.5 to any port 21
-```
-Verify:
-```
-sudo ufw status
-```
-
----
-### 🔁 Step 3: Re-run the Attack
-Now that we've set up our defense, let's re-run the attack.
-
----
 ## 🔐 Before-and-After Security Status
+
 | Scenario              | Attack Outcome        | Explanation                                |
 |-----------------------|-----------------------|--------------------------------------------|
 | **Before Defense**    | Reverse shell opened  | Exploit successful via mod_copy            |
-| **After Defense**     | Exploit failed        | mod_copy disabled, FTP blocked by firewall |
+| **After Defense**     | Exploit failed        | mod_copy module disabled in ProFTPD config |
+
 
