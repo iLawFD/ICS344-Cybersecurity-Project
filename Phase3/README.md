@@ -6,7 +6,7 @@
 ```
 <IfModule mod_copy.c> CopyEngine off </IfModule>
 ```
-![Disabling mod_copy](Phase3/screenshots/A.png)
+![Disabling mod_copy](screenshots/A.png)
 This line explicitly disables the CopyEngine of the mod_copy module in ProFTPD.
 
 This action mitigates the vulnerability CVE-2015-3306, which allows arbitrary file copying via SITE CPFR and SITE CPTO.
@@ -19,10 +19,10 @@ For the sake of comparison, we will run the attack twice — once before setting
 The whoami command returns www-data, confirming gained access as a web service user.
 ![attack before 2](screenshots/C.png)
 
-### Attack After Defense:
+### Attack After Defense
 ![attack after](screenshots/D.png)
 As illustrated above, the attack failed due to a write failure during the proftpd_modcopy_exec attack
----
+
 
 ## 🔐 Before-and-After Security Status
 
