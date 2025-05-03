@@ -16,7 +16,7 @@ To enable continuous, automated log collection, we set up the **Splunk Universal
 
 
 
-![Screenshot A](Screenshots/metas.png)
+
 
 
 
@@ -39,15 +39,13 @@ We started the Splunk Universal Forwarder and accepted the license agreement:
    sudo /opt/splunkforwarder/bin/splunk start --accept-license
    ```
 
-### 
-
 
 ### ✅ Logs Integrated: ("logs from both environments") 
 - **Victim (Metasploitable3)**: Apache access logs (`access.log`)
 - **Attacker (Kali Linux)**: System journal logs (`system-journal.log`)
 
 
--
+-![Screenshot A](Screenshots/metas.png)
 > 📸 *Screenshot C: Uploading `system-journal.log` into Splunk (Attacker logs)*
 ![Screenshot C](./Screenshots/C.png)
 
