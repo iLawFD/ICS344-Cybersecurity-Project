@@ -16,6 +16,9 @@ To enable continuous, automated log collection, we set up the **Splunk Universal
 
 
 
+![Screenshot A](Screenshots/metas.png)
+
+
 
 ### 🚀 Step 1: Download Splunk Universal Forwarder
 
