@@ -19,6 +19,13 @@ For the sake of comparison, we will run the attack twice — once before setting
 ![attack before 2](screenshots/C.png)
 
 ![reverse shell works, whoami returns victim](screenshots/reverse.png)
+
+
+The attacker uses Metasploit with the proftpd_modcopy_exec exploit.
+
+The reverse shell is successfully established, as seen by the Netcat listener (nc -lvnp 4444) on the attacker’s Kali machine receiving a connection back from the victim (Metasploitable3).
+
+The payload is executed, and a shell is opened, showing full compromise.
 ### Attack After Defense
 ![attack after](screenshots/D.png)
 As illustrated above, this error occurs during the exploitation attempt using the proftpd_modcopy_exec module in Metasploit. It indicates that the FTP server was unable to copy the payload file to the web root directory on the target machine.
