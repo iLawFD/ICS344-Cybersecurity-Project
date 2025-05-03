@@ -15,10 +15,10 @@ This action mitigates the vulnerability CVE-2015-3306, which allows arbitrary fi
 For the sake of comparison, we will run the attack twice — once before setting the defense and once after.
 
 ### Attack Before Defense
-![attack before 1](screenshots/B.png)
-The whoami command returns www-data, confirming gained access as a web service user.
+
 ![attack before 2](screenshots/C.png)
 
+![reverse shell works, whoami returns victim](screenshots/reverse.png)
 ### Attack After Defense
 ![attack after](screenshots/D.png)
 As illustrated above, this error occurs during the exploitation attempt using the proftpd_modcopy_exec module in Metasploit. It indicates that the FTP server was unable to copy the payload file to the web root directory on the target machine.
