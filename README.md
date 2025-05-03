@@ -9,9 +9,13 @@ A cybersecurity project for ICS344 involving vulnerable service exploitation, SI
 - **MUATH ALWADEAI** – ID: 202045580
 
 ## 📌 Work Distribution
-- [Fahad Almutair] – Phase 1 setup & Metasploit attack
-- [MOHAMMED AL SHEQAIH] – Custom script & Phase 2 SIEM
-- [MUATH ALWADEAI] – Defensive strategy & documentation
+
+Note: While the tasks were divided as shown, the project involved overlapping efforts, and all team members contributed collaboratively to testing, documentation, and troubleshooting to ensure the success of each phase.
+
+
+- [Fahad Almutair] – Phase 1 setup & Metasploit attack & Custom script 
+- [MOHAMMED AL SHEQAIH] –  Phase 2 SIEM & Documentation
+- [MUATH ALWADEAI] – Defensive strategy & Documentation
 
 ---
 
