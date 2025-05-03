@@ -8,6 +8,37 @@ In this phase, we integrated logs from both the **victim** and **attacker** envi
 ![Screenshot A](Screenshots/A.png)
 
 
+
+## 🔄 Splunk Forwarder Setup (Automated Log Ingestion)
+
+To enable continuous, automated log collection, we set up the **Splunk Universal Forwarder** on both the victim (Metasploitable3) and attacker (Kali) machines. This ensures that logs are forwarded in real time to the Splunk server for seamless monitoring and analysis.
+
+
+
+
+
+### 🚀 Step 1: Download Splunk Universal Forwarder
+
+We downloaded the latest Splunk Universal Forwarder package:
+
+```bash
+wget -O splunkforwarder-9.4.1-e3bdab203ac8-linux-arm64.deb "https://download.splunk.com/products/universalforwarder/releases/9.4.1/linux/splunkforwarder-9.4.1-e3bdab203ac8-linux-arm64.deb"
+```
+### 🛠 Step 2: Install the Forwarder Package
+We installed the package using dpkg:
+  ```bash
+   sudo dpkg -i splunkforwarder-9.4.1-e3bdab203ac8-linux-arm64.deb
+   ```
+
+### ▶️ Step 3: Start Splunk Forwarder & Accept License
+We started the Splunk Universal Forwarder and accepted the license agreement:
+   ```bash
+   sudo /opt/splunkforwarder/bin/splunk start --accept-license
+   ```
+
+### 
+
+
 ### ✅ Logs Integrated: ("logs from both environments") 
 - **Victim (Metasploitable3)**: Apache access logs (`access.log`)
 - **Attacker (Kali Linux)**: System journal logs (`system-journal.log`)
